@@ -1,0 +1,70 @@
+.register-outer-container{
+    color: green;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.register-form{
+    background-color: wheat;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 40px;
+    border: 2px solid green;
+    
+}
+
+.register-form > span{
+    /* background-color: aqua; */
+    /* width: 100px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    gap: 10px;
+}
+
+.register-form > span > label{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.register-form > span > input{
+    height: 30px;
+    border: 1px solid green;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.register-btn-container{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+}
+
+.register-btn{
+    width: 150px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+    border: none;
+    border-radius: 8px;
+    
+}
+
+.redirectToLogin{
+    display: flex;
+    justify-content: center;
+}

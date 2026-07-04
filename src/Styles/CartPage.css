@@ -1,0 +1,67 @@
+.cartPage-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+    padding: 10px;
+    color: green;
+}
+
+.cartPage-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+}
+
+.cartPage-update-btn{
+    width: 30px !important;
+    height: 10px;
+}
+
+.cartPage-outerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.cartPage-buyNow{
+background-color: rgb(73, 176, 73);
+width: 30%;
+height: 400px;
+margin: 10px;
+}
+
+.cartPage-buyNow-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+    padding: 10px;
+}
+
+.cb-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cb-btn-span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cb-btn-span > button{
+    background-color: wheat;
+    color: black;
+    border: none;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+
+}
+
+.cb-btn-span > button:hover{
+background-color: white;
+}

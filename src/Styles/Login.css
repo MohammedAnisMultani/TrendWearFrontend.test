@@ -1,0 +1,60 @@
+.login-outer-container{
+    /* background-color: wheat; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: green;
+}   
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: wheat;
+    /* align-items: center; */
+    height: 250px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid green;
+}
+
+.login-label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.login-label > label{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.login-label > input{
+    height: 30px;
+}
+
+.login-btn{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.login-btn>button{
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.redirectToRegister{
+    display: flex;
+    justify-content: center;
+
+}
