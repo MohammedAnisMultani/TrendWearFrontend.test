@@ -10,7 +10,7 @@ export const CartProvider = ({children}) => {
       
     
     try {
-        const data = await axios.post('http://localhost:5000/Cart', product, {withCredentials:true})
+        const data = await axios.post('https://trend-wear-test-z9so.vercel.app/Cart', product, {withCredentials:true})
         setCart(prev=>[...prev, data]) 
         console.log(data)
     } catch (error) {
