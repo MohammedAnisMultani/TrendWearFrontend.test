@@ -24,7 +24,9 @@ const handleLogin = async(e) =>{
     return(
 <>
 <div className='login-outer-container'>
-    <h1>Login</h1>
+    <h1 className='login-heading'>Login</h1>
+    <div className='login-mid-container'> 
+    <div className='login-img-container'><img className='login-img' src="./Images/login.png" alt="" /></div>
     <form onSubmit={handleLogin}>
        <span className='login-label'>
          <label htmlFor="usernameOrEmail">Username or Email</label>
@@ -39,7 +41,8 @@ const handleLogin = async(e) =>{
             <p>Don't have an Account? click here to <Link to='/Register'>SignUp</Link></p>
         </div>
     </form>
-</div>
+
+</div></div>
 </>
     )
 }

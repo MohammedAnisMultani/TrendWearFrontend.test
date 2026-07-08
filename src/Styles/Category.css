@@ -1,15 +1,28 @@
 .category{
     background-color: wheat;
     color: green;
+   
 }
 .category-head{
     /* background-color: aqua; */
+     /* background: linear-gradient(to right, wheat, rgb(198, 186, 164)); */
     display: flex;
     justify-content: center;
 }
+.category-head > h1{
+    /* border-top:  solid white; */
+    border-bottom: 25px solid white;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.collection-img{
+    /* border: 5px solid green; */
+    transition: transform 0.3sec ease;
+}
 
-img{
-    border: 10px solid green;
+.collection-img:hover{
+    transform: scale(1.05);
 }
 
 .category-tail{
@@ -30,7 +43,7 @@ color: green;
 .category-men-link > img{
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 
 }
 
@@ -45,7 +58,7 @@ color: green;
 .category-women > img{
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 
 }
 
@@ -60,7 +73,7 @@ color: green;
 .category-kids > img{
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 
 }
 
@@ -75,8 +88,33 @@ color: green;
 .category-accessories > img{
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 
+}
+
+/* ---------------- */
+
+@media(max-width: 768px){
+    .category-head>h1{
+        font-size: large;
+        margin-top: 20px;
+    }
+
+    .category-tail{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .collection-link> h2{
+        font-size: medium;
+    }
+    .collection-img{
+        width: 150px !important;
+        height: 150px !important;
+        
+    }
+
+  
 }
 
 

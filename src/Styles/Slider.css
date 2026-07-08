@@ -60,3 +60,23 @@
     height: 50px;
     border: none;
 }
+
+
+/* ---------------- */
+/* mobile  */
+
+@media(max-width:768px){
+
+.home-title-image{
+    height: 40px;
+}
+
+.slider-poster-img{
+    height: 200px;
+}
+
+.slider-left-btn, .slider-right-btn{
+    display: none;
+}
+
+}

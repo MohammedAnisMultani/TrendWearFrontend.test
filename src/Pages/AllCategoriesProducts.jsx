@@ -50,14 +50,14 @@ const pageHandler = (selectedPage) => {
         return(
         <>
         <Navbar/>
-        <h1 className="product-heading">{category} products</h1>
-           <section className="product-container">
+        <h1 className="allC-product-heading">{category} products</h1>
+           <section className="allC-product-container">
              {productList.slice(pageNumber*10-10,pageNumber*10).map((item, index)=>{
                 return(
-                    <div className="product-cards" key={index}> 
+                    <div className="allC-product-cards" key={index}> 
                         <h1>{item.name}</h1 >
-                        <img className="category-image" src={!item.image ? "/Images/srk-men-collection-image.jpg" : item.image} alt="Image Not Found" />
-                        <div className="category-lower">
+                        <img className="allC-category-image" src={!item.image ? "/Images/srk-men-collection-image.jpg" : item.image} alt="Image Not Found" />
+                        <div className="allC-category-lower">
                                <h2>Price: {item.price}</h2>
                                <button onClick={()=> {AddToCart(item)}}>Add to Cart</button>
                         </div>

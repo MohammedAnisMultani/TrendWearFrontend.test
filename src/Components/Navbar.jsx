@@ -12,6 +12,11 @@ const Navbar = () => {
     
  }
 
+//  function isLogged(){
+//     console.log(document.cookie)
+//     navigate('/login')
+//  }
+
  useEffect(()=>{
     if(filterEnable){
         navigate('/FilterAllProducts')
@@ -31,9 +36,9 @@ return(
         </div>
         <div id="nav-right-links">
             <p>Home</p>
-            <button onClick={()=>{navigate('/Cart')}}>Cart</button>
+            
             <p>checkout</p>
-            <button onClick={()=>navigate('/Register')}>Signup</button>
+            <button className='nav-cart-btn' onClick={()=>navigate('/Cart')}>Cart</button>
         </div>
     </section>
     </>

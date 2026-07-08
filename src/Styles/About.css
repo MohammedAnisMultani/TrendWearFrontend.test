@@ -78,3 +78,32 @@ font-weight: bolder;
 .about-contactUs:hover{
     color: black;
 }
+
+
+
+/* ---------------- */
+/* Mobile  */
+
+@media(max-width: 768px){
+    .aud1 > p{
+        display: none;
+    }
+
+    .about-image{
+        margin-left: 50vw;
+    }
+    .upper-about{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .auright{
+        display: flex;
+        justify-content: space-between;
+    gap: 100%;
+        /* align-items: center; */
+    }
+
+   
+}

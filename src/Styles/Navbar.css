@@ -44,3 +44,39 @@
     height: 40px;
     border: none;
 }
+
+.nav-cart-btn{
+     background-color: rgb(87, 160, 87);
+     border: none;
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+/* ---------------- */
+/* Mobile  */
+
+@media(max-width: 768px){
+
+#nav-left-logo > img{
+    width: 70px;
+    height: 30px;
+}
+
+#nav-center-search>input{
+    width: 50%;
+    height: 20px;
+    margin-left: 30px;
+}
+
+#nav-center-search > button{
+    /* width: 20px; */
+    height: 21px;
+    font-size: smaller !important;
+}
+
+#nav-right-links > p{
+    display: none;
+}
+
+}

@@ -52,14 +52,16 @@ const FilterAllProducts = () => {
     return(
         <>
          <section className="filterNavbar-main">
-        <div>
-            <p>logo</p>
+        <div className="filterPage-img-logo-container">
+            <img className="filterPage-img-logo" src="./Images/trendzWear1.png" alt="" />
         </div>
         <div>
-            <input onChange={(e)=>{setInputVal(e.target.value)}} value={inputVal} ref={inputRef} type="text" name="" id="" />    
-            <button>search</button>
+            <input className="filterPage-inp" onChange={(e)=>{setInputVal(e.target.value)}} value={inputVal} ref={inputRef} type="text" name="" id="" />    
+            <button className="filterPage-search-btn">search</button>
         </div>       
-        <div><button onClick={()=> {AddToCart(item)}}>Add to Cart</button></div>       
+        <div>
+            <button className="filterPage-cart-btn" onClick={()=> {AddToCart(item)}}>Cart</button>
+        </div>       
 
     </section>
         
@@ -67,10 +69,15 @@ const FilterAllProducts = () => {
              {filteredData.map((item, index)=>{
                 return(
                     <div className="product-cards" key={index}> 
-                        <h1>{item.name}</h1 >
-                        <img className="category-image" src="/Images/srk-men-collection-image.jpg" alt="" />
-                        <h2>Price: {item.price}</h2>
-                        <button>Add to Cart</button>
+                        <div className="allP-img-container">
+                            <img className="category-image" src={item.image} alt="" />
+                        </div>
+                       <div className="allP-detail-container"> 
+                        <h3 className="allP-name">{item.name}</h3>
+                       <div className="allP-subDetail-container">
+                         <h4 className="allP-price">Price: {item.price}</h4>
+                        <button className="filterPage-addToCart">Add to Cart</button></div>
+                       </div>
                     </div>
                 )
             })

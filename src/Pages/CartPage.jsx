@@ -161,10 +161,10 @@ return(
         <div className="cartPage-container">
         {cart.map((item, index)=>{
         return(
-            <div className="product-cards" key={index}> 
+            <div className="cartPage-product-cards" key={index}> 
                         <h1>{item.name}</h1 >
-                        <img className="category-image" src="/Images/srk-men-collection-image.jpg" alt="" />
-                        <div className="category-lower">
+                        <img className="cartPage-category-image" src={item.image} alt="" />
+                        <div className="cartPage-category-lower">
                                <h2>Price: {item.price}</h2>
                                {/* <button>Buy Now</button> */}
                                <button className="cartPage-update-btn" onClick={()=>updateQuantity(item._id,"dec")}>-</button>

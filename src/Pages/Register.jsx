@@ -39,7 +39,9 @@ const Register = () => {
   return (
     <>
       <div className="register-outer-container">
-        <h1>Register</h1>
+        <h1 className="register-heading">Register</h1>
+        <div className="register-mid-container">
+        <div><img className="register-img" src="./Images/register1.png" alt="" /></div>
         <form onSubmit={handleRegister} className="register-form">
           <span>
             <label htmlFor="name">Name</label>
@@ -95,6 +97,7 @@ const Register = () => {
             <p >Already have an Account? click here to <Link to='/Login'>login</Link></p>
           </div>
         </form>
+        </div>
       </div>
     </>
   );

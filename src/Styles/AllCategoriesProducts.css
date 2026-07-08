@@ -1,4 +1,4 @@
-.product-container{
+.allC-product-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
@@ -8,7 +8,7 @@
     background-color: wheat;
 }
 
-.product-cards{
+.allC-product-cards{
     width: 25vw;
     height: 70vh;
     background-color: rgb(87, 160, 87);
@@ -17,7 +17,7 @@
 
 }
 
-.product-cards{
+.allC-product-cards{
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -27,7 +27,7 @@ padding: 10px;
 
 }
 
-.category-lower{
+.allC-category-lower{
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -35,7 +35,7 @@ padding: 10px;
     align-items: center;
 }
 
-.category-lower > button{
+.allC-category-lower > button{
 background-color: wheat;
 color: green;
 border: none;
@@ -44,9 +44,9 @@ height: 30px;
 
 }
 
-.category-image{
-   width:70%;
-   height: 70%;
+.allC-category-image{
+   width:280px;
+   height: 300px;
    margin: 20px;
    background-color: white !important;
    border-radius: 20px;
@@ -55,7 +55,7 @@ height: 30px;
    box-sizing: border-box;
    /* object-fit: contain; */
 }
-.product-heading{
+.allC-product-heading{
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -90,4 +90,62 @@ height: 30px;
 
 .clicked{
     background-color: greenyellow;
+}
+
+
+/* ----------------- */
+/* mobile  */
+
+@media(max-width: 768px){
+    .allC-product-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .allC-product-cards{
+        width: 20vw;
+        height: 20vh;
+        border: none !important;
+        border-radius: 0px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    ;
+    }
+
+    .allC-product-cards>h1{
+        font-size: xx-small;
+        margin: 0;
+    }
+
+    
+
+    .allC-category-image{
+        width: 100%;
+        height: 60%;
+        border-radius: 0px;
+        border: 0.1px solid wheat !important;
+        margin: 0;
+    }
+
+    .allC-category-lower{
+        margin: 0;
+        padding: 0;
+        gap: 0px;
+    }
+    .allC-category-lower>h2{
+        font-size: xx-small;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .allC-category-lower>button{
+        width: 50px;
+        font-size: xx-small;
+        height: 20px;
+        
+    }
+
 }
