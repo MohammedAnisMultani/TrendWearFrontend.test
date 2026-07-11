@@ -28,7 +28,7 @@ return(
     <>
     <section id="nav-container-main">
         <div id="nav-left-logo">
-            <img src="public/Images/trendzWear1.png" alt="" />
+            <img src="/Images/trendzWear1.png" alt="" />
         </div>
         <div id="nav-center-search">
             <input onClick={changeCapture} type="text" placeholder='search...'/>

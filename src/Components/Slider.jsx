@@ -34,7 +34,7 @@ const Slider = () => {
     return(
         <>
         <h1 className='home-title'>
-            <img className='home-title-image' src="public/Images/trendzWear-blacktheme1.png" alt="" />
+            <img className='home-title-image' src="/Images/trendzWear-blacktheme1.png" alt="" />
         </h1>
         <div className='slider-outer-container'>
             <span onClick={()=>handlePrev()} className='slider-left-btn'>◀</span>
