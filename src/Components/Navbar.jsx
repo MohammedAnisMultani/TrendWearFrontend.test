@@ -4,24 +4,24 @@ import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const[filterEnable, setFilterEnable] = useState(false);
+    // const[filterEnable, setFilterEnable] = useState(false);
     const navigate = useNavigate() 
 
-    const changeCapture = () => {
-    setFilterEnable(true);
+//     const changeCapture = () => {
+//     setFilterEnable(true);
     
- }
+//  }
 
 //  function isLogged(){
 //     console.log(document.cookie)
 //     navigate('/login')
 //  }
 
- useEffect(()=>{
-    if(filterEnable){
-        navigate('/FilterAllProducts')
-    }
- },[filterEnable])
+//  useEffect(()=>{
+//     if(filterEnable){
+//         navigate('/FilterAllProducts')
+//     }
+//  },[filterEnable])
 
 
 return(
@@ -31,7 +31,7 @@ return(
             <img src="/Images/trendzWear1.png" alt="" />
         </div>
         <div id="nav-center-search">
-            <input onClick={changeCapture} type="text" placeholder='search...'/>
+            <input onClick={()=>navigate('/filterAllProducts')} type="text" placeholder='search...'/>
             <button>search</button>
         </div>
         <div id="nav-right-links">

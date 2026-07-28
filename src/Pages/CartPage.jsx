@@ -41,7 +41,7 @@ const updateQuantity = async(id,action) => {
             return prevCart.map((item)=> item._id == id ? {...item, quantity : item.quantity - 1}: item)
         }
         else{
-            return prevCart.filter((item) => item._id != id)
+            return prevCart.filter((item) => item._id != i)
         }
         }return prevCart
     }

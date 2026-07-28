@@ -2,6 +2,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom'
 import '../Styles/Login.css'
 import { useState } from 'react'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const Login = () => {
 
@@ -16,6 +17,7 @@ const handleLogin = async(e) =>{
         let res = await axios.post("https://trend-wear-test-z9so.vercel.app/login-form", {usernameOrEmail, password}, {withCredentials : true})
         console.log(res.data)
         navigate('/')
+        toast.success("Login successfully")
     } catch (error) {
         console.log(error, "error")
     }
@@ -34,7 +36,7 @@ const handleLogin = async(e) =>{
        </span>
       <span className='login-label'>
           <label htmlFor="password">Password</label>
-        <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" name="password" placeholder="Enter your password" />
+        <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Enter your password" />
       </span>
         <span className='login-btn'><button type="submit">Login</button></span>
         <div className='redirectToRegister'>

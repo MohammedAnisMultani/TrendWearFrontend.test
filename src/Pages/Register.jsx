@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Styles/Register.css";
 import { useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Register = () => {
 
@@ -32,6 +33,7 @@ const Register = () => {
 
       console.log(res.data)
       navigate('/Login')
+      toast.success("Registered successfully")
     } catch (error) {
       console.log(error, "error")
     }
@@ -72,7 +74,7 @@ const Register = () => {
           <span>
             <label htmlFor="password">Password</label>
             <input
-              type="text"
+              type="password"
               value={formData.password}
               onChange={handleChange}
               name="password"
@@ -83,7 +85,7 @@ const Register = () => {
           <span>
             <label htmlFor="cpassword">Confirm Password</label>
             <input
-              type="text"
+              type="password"
               value={formData.cpassword}
               onChange={handleChange}
               name="cpassword"
