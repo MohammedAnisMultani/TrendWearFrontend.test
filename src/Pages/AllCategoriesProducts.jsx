@@ -14,6 +14,8 @@ import { CartContext } from "../Components/CartContext";
         const[productList, setProductList] = useState([]);
         const[pageNumber, setPageNumber] = useState(1);
 
+
+
         const totalPages = (productList.length/10)
         console.log(totalPages)
 
@@ -46,7 +48,6 @@ const pageHandler = (selectedPage) => {
     },[])
         
 
-
         return(
         <>
         <Navbar/>
@@ -59,7 +60,7 @@ const pageHandler = (selectedPage) => {
                         <img className="allC-category-image" src={!item.image ? "/Images/srk-men-collection-image.jpg" : item.image} alt="Image Not Found" />
                         <div className="allC-category-lower">
                                <h2>Price: {item.price}</h2>
-                               <button onClick={()=> {AddToCart(item)}}>Add to Cart</button>
+                               <button  onClick={()=> {AddToCart(item)}}>Add to Cart</button>
                         </div>
                     </div>
                 )

@@ -26,9 +26,11 @@
 }
 
 .cartPage-buyNow{
-background-color: rgb(73, 176, 73);
+/* background-color: rgb(73, 176, 73); */
 width: 30%;
-height: 400px;
+
+box-sizing: border-box;
+/* height: 400px; */
 margin: 10px;
 }
 
@@ -38,17 +40,23 @@ margin: 10px;
     justify-content: center;
     background-color: wheat;
     padding: 10px;
+    
+
 }
 
 .cb-details{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: rgb(28, 180, 28);
+    margin: 0;
+    padding: 10px;
 }
 .cb-btn-span{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
 
 }
 
@@ -59,11 +67,12 @@ margin: 10px;
     height: 40px;
     width: 150px;
     cursor: pointer;
+    
 
 }
 
 .cb-btn-span > button:hover{
-background-color: white;
+background-color: rgb(250, 203, 116);
 }
 
 /* ----------------- */

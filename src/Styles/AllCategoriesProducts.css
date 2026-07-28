@@ -44,6 +44,11 @@ height: 30px;
 
 }
 
+.allC-category-lower > button:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
 .allC-category-image{
    width:280px;
    height: 300px;

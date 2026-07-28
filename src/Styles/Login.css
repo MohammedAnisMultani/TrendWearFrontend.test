@@ -41,6 +41,7 @@ form{
     display: flex;
     /* align-items: center; */
     justify-content: center;
+   
 }
 
 .login-btn>button{
@@ -50,7 +51,12 @@ form{
     height: 30px;
     border: none;
     border-radius: 5px;
+     cursor: pointer;
 
+}
+
+.login-btn>button:hover{
+    background-color: rgb(83, 176, 83);
 }
 
 .redirectToRegister{

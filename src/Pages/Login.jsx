@@ -8,10 +8,12 @@ const Login = () => {
 
     const [usernameOrEmail, setUsernameOrEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [disabled, setDisabled] = useState(false)
     const navigate = useNavigate()
 
 const handleLogin = async(e) =>{
     e.preventDefault()
+    setDisabled(true)
 
     try {
         let res = await axios.post("https://trend-wear-test-z9so.vercel.app/login-form", {usernameOrEmail, password}, {withCredentials : true})
@@ -20,8 +22,14 @@ const handleLogin = async(e) =>{
         toast.success("Login successfully")
     } catch (error) {
         console.log(error, "error")
+        toast.error("Login failed")
+    }
+    finally{
+        setDisabled(false)
     }
 }
+
+
 
     return(
 <>
@@ -38,7 +46,7 @@ const handleLogin = async(e) =>{
           <label htmlFor="password">Password</label>
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Enter your password" />
       </span>
-        <span className='login-btn'><button type="submit">Login</button></span>
+        <span className='login-btn'><button  disabled={disabled} type="submit">Login</button></span>
         <div className='redirectToRegister'>
             <p>Don't have an Account? click here to <Link to='/Register'>SignUp</Link></p>
         </div>
