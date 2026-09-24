@@ -117,4 +117,23 @@ color: green;
   
 }
 
+/* --------- */
+/* tailwindcss */
+
+.card-content{
+    transform-style: preserve-3d;
+}
+
+.home-card:hover .card-content{
+    transform: rotateY(.5turn);
+}
+
+.card-back{
+    transform: rotateY(.5turn);
+}
+
+.card-front, .card-back{
+    backface-visibility: hidden;
+}
+
 
