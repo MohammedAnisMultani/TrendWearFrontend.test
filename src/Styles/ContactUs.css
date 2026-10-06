@@ -61,3 +61,105 @@
     font-weight: bolder;
 }
 
+
+
+/* __________________ */
+@media (max-width: 768px) {
+
+  /* ===== Page: soft green gradient background ===== */
+  .contactus-main-container {
+    height: auto !important;
+    min-height: 100vh;
+    padding-bottom: 32px;
+    background: linear-gradient(160deg, #f5deb3 0%, #e8f5e0 55%, #c9ecc4 100%) !important;
+  }
+
+  /* ===== Heading bar ===== */
+  .contactus-heading {
+    width: calc(100% - 24px) !important;
+    margin: 12px !important;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 120, 0, 0.35);
+  }
+  .contactus-heading h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  /* ===== Wrapper: full width so the form can be centered ===== */
+  .contactus-form-section {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  /* ===== Form card ===== */
+  .contactus-form {
+    width: 90% !important;
+    max-width: 420px;
+    height: auto !important;
+    padding: 22px 18px !important;
+    border-radius: 22px !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    border-top: 5px solid #16a34a !important;
+    box-shadow: 0 14px 35px rgba(0, 90, 0, 0.22) !important;
+  }
+
+  .contactus-form > label {
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    color: #166534;
+    padding-top: 6px !important;
+  }
+
+  /* ===== Fields ===== */
+  .contactus-form > input,
+  .contactus-form > textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    background-color: #f1f5f1 !important;
+    border: 2px solid transparent !important;
+    border-radius: 12px !important;
+    transition: all 0.25s ease;
+  }
+  .contactus-form > input {
+    height: 46px;
+    padding-left: 14px !important;
+  }
+  .contactus-form > textarea {
+    padding: 12px !important;
+    resize: none;
+    min-height: 120px;
+  }
+  .contactus-form > input::placeholder,
+  .contactus-form > textarea::placeholder {
+    color: #94a3a0;
+  }
+
+  /* Glow when a field is selected */
+  .contactus-form > input:focus,
+  .contactus-form > textarea:focus {
+    outline: none;
+    background-color: #ffffff !important;
+    border-color: #22c55e !important;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+  }
+
+  /* ===== Button ===== */
+  .contactus-form > button {
+    height: 48px;
+    margin-top: 12px;
+    font-size: 1rem;
+    letter-spacing: 0.6px;
+    border-radius: 14px !important;
+    background: linear-gradient(135deg, #15803d, #22c55e) !important;
+    box-shadow: 0 8px 18px rgba(21, 128, 61, 0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .contactus-form > button:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 10px rgba(21, 128, 61, 0.4);
+  }
+}

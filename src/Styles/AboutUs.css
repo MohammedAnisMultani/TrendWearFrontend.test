@@ -1,4 +1,4 @@
-/* Main container */
+Main container
 .about-main-container {
   background-color: wheat; /* same tone as Privacy Policy */
   padding: 20px;
@@ -90,4 +90,95 @@
   .about-heading h1 {
     font-size: 1.6rem;
   }
+}
+
+
+/* ____________________________ */
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(to right, #1a4d2e, #3ca55c);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Story Section */
+.about-story {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-story h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1a4d2e;
+}
+
+.about-story p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Mission & Vision */
+.about-mission {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-mission h2 {
+  font-size: 2rem;
+  margin: 20px 0 10px;
+  color: #3ca55c;
+}
+
+.about-mission p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Values Section */
+.about-values {
+  background: #f0fdf4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-values h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1a4d2e;
+}
+
+.about-values ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-values li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }

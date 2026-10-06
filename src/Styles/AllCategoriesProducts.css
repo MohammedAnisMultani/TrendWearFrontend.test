@@ -100,7 +100,7 @@ height: 30px;
 
 /* ----------------- */
 /* mobile  */
-
+/* 
 @media(max-width: 768px){
     .allC-product-container{
         display: flex;
@@ -153,4 +153,74 @@ height: 30px;
         
     }
 
+} */
+
+/* _______________________ */
+@media (max-width: 768px) {
+
+  /* Heading: smaller */
+  section.ml-3 > h1 {
+    font-size: 1.5rem !important;
+  }
+  section.ml-3 > p {
+    font-size: 0.75rem;
+  }
+
+  /* Wrapper: banner on top, products below (instead of side by side) */
+  div:has(> aside) {
+    flex-direction: column !important;
+  }
+
+  /* Banner: full width, limited height */
+    /* Hide the banner on mobile */
+  div:has(> aside) > aside {
+    display: none !important;
+  }
+  
+
+  /* Products: 2 cards per line */
+  section.grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100%;
+    padding: 6px;
+  }
+
+  /* Card: smaller margin and padding */
+  section.grid-cols-4 > div {
+    margin: 6px !important;
+    padding: 8px !important;
+    min-width: 0;
+  }
+
+  /* Product image: fills the card, fixed height */
+    /* Product image: whole image visible */
+  section.grid-cols-4 > div img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: contain;
+    background-color: #f3f4f6;
+  }
+
+  /* Name and price: smaller text */
+  section.grid-cols-4 > div h1 {
+    font-size: 0.85rem !important;
+    margin-bottom: 2px;
+  }
+  section.grid-cols-4 > div h2 {
+    font-size: 0.75rem !important;
+    margin-bottom: 6px;
+  }
+
+  /* Add to Cart button: smaller */
+  section.grid-cols-4 > div button {
+    font-size: 0.65rem !important;
+    padding: 3px 8px !important;
+  }
+
+  /* Pagination: wrap if there are many pages */
+  .pagination {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
 }

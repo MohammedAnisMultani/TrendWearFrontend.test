@@ -136,4 +136,52 @@ color: green;
     backface-visibility: hidden;
 }
 
+@media (max-width: 768px) {
 
+  /* 2 cards per line, centered */
+  .category-tail {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    justify-items: center;
+    gap: 16px 10px;
+    padding: 12px !important;
+  }
+
+  /* Every card is a fixed small width (change 140px to make it bigger or smaller) */
+  .category-tail > .category-men,
+  .category-tail > .collection-link {
+    width: 140px !important;
+    min-width: 0;
+  }
+  .category-tail .category-men-link {
+    width: 100% !important;
+  }
+
+  /* Image box: small square */
+  .category-tail .home-card {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .category-tail .card-content {
+    width: 100%;
+    height: 100%;
+  }
+  .category-tail .card-front img,
+  .category-tail .card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Smaller label bar */
+  .category-tail .collection-link > div:last-child,
+  .category-tail .category-men-link > div:last-child {
+    padding: 6px 8px !important;
+  }
+  .category-tail .collection-link h2 {
+    font-size: 0.8rem;
+  }
+  .category-tail .collection-link .material-symbols-outlined {
+    font-size: 16px;
+  }
+}

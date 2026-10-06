@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { Fragment, useContext, useEffect } from "react"
 import { CartContext } from "../Components/CartContext"
 import axios from "axios"
 import { data } from "react-router-dom"
@@ -155,30 +155,114 @@ fetchCartData()
 ///---------
 
 return(
-    <>
-    <h1 className="cartPage-heading">Cart Page</h1>
-    <div className="cartPage-outerContainer">
-        <div className="cartPage-container">
+    // <>
+    // <h1 className="cartPage-heading">Cart Page</h1>
+    // <div className="cartPage-outerContainer">
+    //     <div className="cartPage-container">
+    //     {cart.map((item, index)=>{
+    //     return(
+    //         <div className="cartPage-product-cards" key={index}> 
+    //                     <h1>{item.name}</h1 >
+    //                     <img className="cartPage-category-image" src={item.image} alt="" />
+    //                     <div className="cartPage-category-lower">
+    //                            <h2>Price: {item.price}</h2>
+    //                            {/* <button>Buy Now</button> */}
+    //                            <button className="cartPage-update-btn" onClick={()=>updateQuantity(item._id,"dec")}>-</button>
+    //                            <h3>{item.quantity}</h3>
+    //                            <button className="cartPage-update-btn" onClick={()=>updateQuantity(item._id,"inc")}>+</button>
+    //                            {/* <button onClick={()=>{deleteCartCard(item)}}>Remove</button> */}
+    //                     </div>
+    //                 </div>
+    //     )
+    // })}
+    // </div>
+    // <aside className="cartPage-buyNow">
+    // <h2 className="cartPage-buyNow-heading">Order Details</h2>
+    // <div className="cb-details">
+    //     <div className="cb-right">
+    //         <h4>Items</h4>
+    //         {cart.map((item,index)=>{
+    //             return(
+    //                 <p>{item.name}</p>
+    //             )
+    //         } )}
+    //         <h4>Total:</h4>
+    //     </div>
+
+    //     <div className="cb-middle">
+    //         <h4>Quantity</h4>
+    //         {cart.map((item,index)=>{
+    //             return(
+    //                 <p>{item.quantity}</p>
+    //             )
+    //         })}
+    //     </div>
+
+    //     <div className="cb-left">
+    //         <h4>Price</h4>
+    //         {cart.map((item,index)=>{
+    //             return(
+    //                 <p>{item.price}</p>
+    //             )
+    //         })}
+    //         <h4>{itemSum()}</h4>
+    //     </div>
+
+    // </div>
+    // <div>
+        
+    //     <span className="cb-btn-span"><button onClick={()=> paymentHandler()}>BUY NOW</button></span>
+    // </div>
+    // </aside>
+    // </div>
+    // </>
+
+
+// ----------------------
+ <Fragment>
+    <h1 className="cartPage-heading !bg-green-900 !p-4 !text-green-50 text-2xl !font-bold">Cart Page</h1>
+    <div className="cart-outer-container flex justify-around bg-gray-300">
+        
+        <div className=" ">
+            <h1 className="w-fit bg-white m-4 p-4 !font-extrabold">YOUR CART</h1>
         {cart.map((item, index)=>{
         return(
-            <div className="cartPage-product-cards" key={index}> 
-                        <h1>{item.name}</h1 >
-                        <img className="cartPage-category-image" src={item.image} alt="" />
-                        <div className="cartPage-category-lower">
-                               <h2>Price: {item.price}</h2>
+            <div className="flex justify-between shadow-2xl items-center w-200 rounded-xl bg-gray-50 m-4 p-2" key={index}> 
+
+                        <div className="flex">
+                            <img className="w-30 h-30 rounded-xl shadow-2xl" src={item.image} alt="" />
+                        
+                        <div className="p-2">
+                        <h1 className="!font-bold">{item.name}</h1 >
+                        <p className="flex items-center !text-sm font-bold"><span class="material-symbols-outlined !text-sm">currency_rupee</span> {item.price}</p>
                                {/* <button>Buy Now</button> */}
-                               <button className="cartPage-update-btn" onClick={()=>updateQuantity(item._id,"dec")}>-</button>
-                               <h3>{item.quantity}</h3>
-                               <button className="cartPage-update-btn" onClick={()=>updateQuantity(item._id,"inc")}>+</button>
-                               {/* <button onClick={()=>{deleteCartCard(item)}}>Remove</button> */}
+                       
+                       
                         </div>
+                        </div>
+            
+            
+                        <div className="flex flex-col items-center">
+                            <div className="flex gap-3 items-center justify-center ">
+                               <button className="" onClick={()=>updateQuantity(item._id,"dec")}><span class="material-symbols-outlined bg-red-400 !text-green-50 text-center rounded-sm">remove</span></button>
+                               <h3 className="!font-bold">{item.quantity}</h3>
+                               <button className="" onClick={()=>updateQuantity(item._id,"inc")}><span class="material-symbols-outlined bg-green-400 !text-green-50  rounded-sm">add</span></button>
+                               </div>
+                               <div>
+                                <button className="!text-sm bg-gray-800 rounded-md font-bold p-1 w-50 !text-green-50">Remove</button>
+                               </div>
+                        </div>
+                               
+                               {/* <button onClick={()=>{deleteCartCard(item)}}>Remove</button> */}
                     </div>
         )
     })}
     </div>
-    <aside className="cartPage-buyNow">
-    <h2 className="cartPage-buyNow-heading">Order Details</h2>
-    <div className="cb-details">
+    <aside className="cartPage-buyNow !mt-20">
+    <h2 className="cartPage-buyNow-heading text-xl shadow-2xl rounded-t-2xl !bg-green-800 text-white !font-bold">Order Summary</h2>
+    
+    <div className=" p-3 !bg-green-50 shadow-2xl rounded-b-2xl">
+        <div className="flex justify-between">
         <div className="cb-right">
             <h4>Items</h4>
             {cart.map((item,index)=>{
@@ -209,13 +293,16 @@ return(
         </div>
 
     </div>
-    <div>
+     <div>
+        <span className="cb-btn-span"><button className="!w-full !bg-green-800 !text-sm !text-green-50 font-bold rounded-xl hover:!bg-gray-800" onClick={()=> paymentHandler()}>BUY NOW</button></span>
         
-        <span className="cb-btn-span"><button onClick={()=> paymentHandler()}>BUY NOW</button></span>
     </div>
+    </div>
+   
     </aside>
     </div>
-    </>
+    </Fragment>
+
 )
 }
 

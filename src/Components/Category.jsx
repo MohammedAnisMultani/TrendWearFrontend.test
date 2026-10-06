@@ -3,7 +3,7 @@ import "../Styles/Category.css"
 const Category = () => {
 return(
     <>
-    <section className="text-xl font-extrabold category">
+    <section id="Category" className=" text-xl font-extrabold category !bg-gray-200 bg-">
     {/* <div className="category-head">
         <h1>Categories</h1>
     </div> */}
