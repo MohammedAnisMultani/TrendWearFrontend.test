@@ -63,27 +63,87 @@
 /* ---------------- */
 /* Mobile  */
 
-@media(max-width: 768px){
 
-#nav-left-logo > img{
-    width: 70px;
-    height: 30px;
-}
+/* Mobile adjustments */
+/* =========================
+   MOBILE NAVBAR
+========================= */
+@media (max-width: 768px) {
+  #nav-container-main {
+    flex-direction: column; /* stack rows */
+    padding: 8px;
+  }
 
-#nav-center-search>input{
-    width: 50%;
-    height: 20px;
-    margin-left: 30px;
-}
+  /* Logo + search stay in one line */
+  #nav-left-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
 
-#nav-center-search > button{
-    /* width: 20px; */
-    height: 21px;
-    font-size: smaller !important;
-}
+  #nav-left-logo img {
+    height: 32px;
+    flex-shrink: 0;
+  }
 
-#nav-right-links > p{
+  #nav-center-search {
+    flex: 1;
+    display: flex;
+    margin-left: 10px;
+    width: 300px;
+  }
+
+  #nav-center-search input {
+    flex: 1;          /* fills available space */
+    min-width: 0;     /* prevents overflow */
+    height: 28px;
+    font-size: 12px;
+    padding: 0 8px;
+    border-radius: 18px;
+    border: none;
+  }
+
+  #nav-center-search button {
+  
     display: none;
 }
 
+  /* Bottom row: nav icons equally spaced */
+  #nav-right-links {
+    display: flex;
+    justify-content: space-around; /* equal spacing */
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  #nav-right-links p {
+    display: none; /* hide labels on mobile */
+  }
+
+  #nav-right-links .material-symbols-outlined {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  #nav-left-logo img {
+    height: 28px;
+  }
+
+  #nav-center-search input {
+    font-size: 11px;
+  }
+
+  #nav-center-search button {
+    width: 50px;
+    font-size: 10px;
+  }
+
+  #nav-right-links .material-symbols-outlined {
+    font-size: 20px;
+  }
 }
