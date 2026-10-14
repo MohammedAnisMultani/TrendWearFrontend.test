@@ -83,27 +83,37 @@ font-weight: bolder;
 
 /* ---------------- */
 /* Mobile  */
+/* =========================
+/* =========================
+   MOBILE FOOTER FIX
+========================= */
+@media (max-width: 768px) {
 
-@media(max-width: 768px){
-    .aud1 > p{
-        display: none;
-    }
+  /* Main section: one column */
+  .About > section:first-child {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 2rem;
+    padding: 1.5rem !important;
+  }
 
-    .about-image{
-        margin-left: 50vw;
-    }
-    .upper-about{
-        display: flex;
-        flex-direction: column;
-        
-    }
+  /* Every block (brand, categories, quick links, help) is full width */
+  .About > section:first-child > section {
+    width: 100% !important;
+  }
 
-    .auright{
-        display: flex;
-        justify-content: space-between;
-    gap: 100%;
-        /* align-items: center; */
-    }
+  /* Logo */
+  .About > section:first-child > section:first-child img {
+    width: 12rem !important;
+    max-width: 100%;
+  }
 
-   
+  /* Help heading aligned left, long email wraps */
+  .About > section:first-child > section:last-child > div:first-child {
+    justify-content: flex-start !important;
+  }
+  .About > section:first-child > section:last-child p {
+    word-break: break-all;
+  }
 }

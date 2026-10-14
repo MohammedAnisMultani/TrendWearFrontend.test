@@ -27,16 +27,16 @@ const ContactUs = () => {
     return(
         <>
         <section className='contactus-main-container'>
-            <header className='contactus-heading'>
-                <h1>Contact Us</h1>
+            <header className='contactus-heading p-2 text-2xl'>
+                <h1 className='!mb-0 text-green-50 !font-bold'>Contact Us</h1>
             </header>
             <section className='contactus-form-section'>
-                <form className='contactus-form'  onSubmit={handleRequest}>
-                    <label htmlFor="name">Name</label>
+                <form className='contactus-form rounded-xl gap-3'  onSubmit={handleRequest}>
+                    <label htmlFor="name" className='!pt-3'>Name</label>
                     <input onChange={(e)=>setFormData((prev)=>({...prev,name : e.target.value}))} value={formData.name} type="text" name='name' placeholder='Enter your name here' required/>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email" className='!pt-3'>Email</label>
                     <input onChange={(e)=>setFormData((prev)=>({...prev, email:e.target.value}))} value={formData.email} type="email" name='email' placeholder='Please enter your Email here' required/>
-                    <label htmlFor="message">Enter you Message</label>
+                    <label htmlFor="message" className='!pt-3'>Enter you Message</label>
                     <textarea onChange={(e)=>setFormData((prev)=>({...prev, message:e.target.value}))} value={formData.message} name="message" rows='5' placeholder='Enter your message here...' required></textarea>
                     <button type='submit'>Send Message</button>
                 </form>

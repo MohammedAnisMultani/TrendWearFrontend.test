@@ -97,30 +97,300 @@
 /* -------------- */
 /* mobile  */
 
-@media(max-width: 768px){
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
+@media (max-width: 768px) {
 
-    .register-outer-container{
-        margin-top: 200px;
-        margin-bottom: 180px;
-        /* width: 100%; */
+    .register-outer-container {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        overflow-x: hidden;
     }
-    .register-mid-container{
+
+
+    /* Register heading */
+
+    .register-heading {
+        width: 100% !important;
+        height: 60px !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 28px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Image + Form container */
+
+    .register-mid-container {
+        width: 94% !important;
+        height: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 0 !important;
+
+        margin: 20px auto !important;
+        padding: 8px !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Image */
+
+    .register-img {
+        width: 100% !important;
+        height: auto !important;
+
+        max-height: 350px;
+
+        object-fit: cover;
+
+        display: block;
+
+        border-radius: 15px 15px 0 0 !important;
+    }
+
+
+    /* Register form */
+
+    .register-mid-container > form {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 500px;
+
+        margin: 0 !important;
+
+        padding: 20px !important;
+
+        box-sizing: border-box;
+
+        border-radius: 0 0 20px 20px !important;
+
+        font-size: 14px;
+    }
+
+
+    /* Form fields */
+
+    .register-form > span {
+        width: 100%;
+
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        width: 100vw;
-       
+
+        gap: 6px;
+
+        margin-bottom: 8px;
     }
 
-    .register-img{
-        width: 80vw;
-        height: 50vh;
+
+    /* Labels */
+
+    .register-form > span > label {
+        display: block !important;
+
+        font-size: 14px;
+
+        font-weight: bold;
     }
 
-    .register-mid-container>form{
-        width: 70vw;
-        margin-bottom: 20px;
-        height: 75vh;
+
+    /* Inputs */
+
+    .register-form > span > input {
+        width: 100%;
+
+        height: 38px;
+
+        box-sizing: border-box;
+
+        font-size: 14px;
+
+        padding: 5px 8px;
     }
+
+
+    /* Signup button */
+
+    .register-btn-container {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        margin-top: 5px;
+    }
+
+
+    .register-btn {
+        width: 150px;
+
+        height: 40px;
+
+        font-size: 15px;
+    }
+
+
+    /* Login redirect */
+
+    .redirectToLogin {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        text-align: center;
+
+        margin-top: 5px;
+    }
+
+
+    .redirectToLogin p {
+        font-size: 13px !important;
+        line-height: 20px;
+    }
+
 }
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .register-heading {
+        height: 55px !important;
+
+        font-size: 25px !important;
+    }
+
+
+    .register-mid-container {
+        width: 94% !important;
+
+        margin-top: 15px !important;
+
+        padding: 6px !important;
+    }
+
+
+    .register-img {
+        width: 100% !important;
+
+        height: 260px !important;
+
+        object-fit: cover;
+    }
+
+
+    .register-mid-container > form {
+        width: 100% !important;
+
+        min-height: 500px;
+
+        padding: 18px !important;
+    }
+
+
+    .register-form > span {
+        gap: 5px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .register-form > span > label {
+        font-size: 13px;
+    }
+
+
+    .register-form > span > input {
+        height: 36px;
+
+        font-size: 13px;
+    }
+
+
+    .register-btn {
+        width: 140px;
+
+        height: 38px;
+
+        font-size: 14px;
+    }
+
+
+    .redirectToLogin p {
+        font-size: 12px !important;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .register-heading {
+        height: 50px !important;
+
+        font-size: 23px !important;
+    }
+
+
+    .register-mid-container {
+        width: 96% !important;
+
+        margin-top: 10px !important;
+    }
+
+
+    .register-img {
+        height: 220px !important;
+    }
+
+
+    .register-mid-container > form {
+        padding: 15px !important;
+
+        min-height: 490px;
+    }
+
+
+    .register-form > span > input {
+        height: 34px;
+    }
+
+
+    .register-btn {
+        width: 130px;
+
+        height: 36px;
+    }
+
+}
+

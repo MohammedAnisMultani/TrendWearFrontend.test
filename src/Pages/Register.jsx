@@ -41,12 +41,12 @@ const Register = () => {
   return (
     <>
       <div className="register-outer-container">
-        <h1 className="register-heading">Register</h1>
-        <div className="register-mid-container">
-        <div><img className="register-img" src="./Images/register1.png" alt="" /></div>
-        <form onSubmit={handleRegister} className="register-form">
+        <h1 className="!bg-green-800 !text-green-100 !font-bold text-xl register-heading ">Register</h1>
+        <div className="!bg-gray-300 rounded-xl register-mid-container">
+        <div><img className="rounded-xl register-img" src="./Images/register1.png" alt="" /></div>
+        <form onSubmit={handleRegister} className="shadow-2xl !border-none !bg-yellow-50 text-green-800 register-form">
           <span>
-            <label htmlFor="name">Name</label>
+            <label className="register-label" htmlFor="name">Name</label>
             <input
               type="text"
               value={formData.name}
@@ -57,7 +57,7 @@ const Register = () => {
             />
           </span>
           <span > 
-            <label htmlFor="username">Username</label>
+            <label className="register-label" htmlFor="username">Username</label>
             <input
               type="text"
               value={formData.username}
@@ -68,11 +68,11 @@ const Register = () => {
             />
           </span>
           <span>
-           <label htmlFor="email">Email</label>
+           <label className="register-label" htmlFor="email">Email</label>
            <input type="email" value={formData.email} onChange={handleChange} name="email" placeholder="Enter your email" required/>
           </span>
           <span>
-            <label htmlFor="password">Password</label>
+            <label className="register-label" htmlFor="password">Password</label>
             <input
               type="password"
               value={formData.password}
@@ -83,7 +83,7 @@ const Register = () => {
             />
           </span>
           <span>
-            <label htmlFor="cpassword">Confirm Password</label>
+            <label className="register-label" htmlFor="cpassword">Confirm Password</label>
             <input
               type="password"
               value={formData.cpassword}
@@ -93,10 +93,10 @@ const Register = () => {
             />
           </span>
           <div className="register-btn-container">
-            <button className="register-btn" type="submit">Sign up</button>
+            <button className="!bg-green-800 hover:cursor-pointer register-btn" type="submit">Sign up</button>
           </div>
           <div className="redirectToLogin">
-            <p >Already have an Account? click here to <Link to='/Login'>login</Link></p>
+            <p className="text-sm" >Already have an Account? click here to <Link className="font-bold bg-gray-200 p-1.5 rounded-sm" to='/Login'>login</Link></p>
           </div>
         </form>
         </div>
