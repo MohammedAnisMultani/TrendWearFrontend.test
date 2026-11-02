@@ -26,25 +26,25 @@ const About = () => {
                     <span className="material-symbols-outlined text-yellow-300">apparel</span>
                     <p className='!m-0'>Shop by Categories</p>
                 </div>
-                <Link to='men' className=''>
+                <Link to='/men' className=''>
                     <div className='flex justify-between rounded-sm items-center hover:!bg-yellow-300 hover:text-black duration-100'>
                     <p className='text-sm !mb-0 p-1'>Men</p>
                    <span className="material-symbols-outlined !text-sm">arrow_forward_ios</span>
                 </div>
                 </Link>
-               <Link to='women'>
+               <Link to='/women'>
                 <div className='flex justify-between items-center rounded-sm hover:!bg-yellow-300 hover:text-black duration-100'>
                     <p className='text-sm !mb-0 p-1'>Women</p>
                    <span className="material-symbols-outlined !text-sm">arrow_forward_ios</span>
                 </div>
                </Link>
-                <Link to='kids'>
+                <Link to='/kids'>
                 <div className='flex justify-between items-center rounded-sm hover:!bg-yellow-300 hover:text-black duration-100'>
                     <p className='text-sm !mb-0 p-1'>Kids</p>
                    <span className="material-symbols-outlined !text-sm">arrow_forward_ios</span>
                 </div>
                 </Link>
-                <Link to='accessories'>
+                <Link to='/accessories'>
                 <div className='flex justify-between items-center rounded-sm hover:!bg-yellow-300 hover:text-black duration-100'>
                     <p className='text-sm !mb-0 p-1'>Accessories</p>
                    <span className="material-symbols-outlined !text-sm">arrow_forward_ios</span>
