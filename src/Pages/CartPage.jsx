@@ -1,8 +1,9 @@
 import { Fragment, useContext, useEffect, useState } from "react";
 import { CartContext } from "../Components/CartContext";
 import axios from "axios";
-import { data } from "react-router-dom";
+import { data, Link } from "react-router-dom";
 import "../Styles/CartPage.css";
+import { toast } from "react-toastify";
 const CartPage = () => {
   const { cart, setCart } = useContext(CartContext);
   const [removingId, setRemovingId] = useState(null);
@@ -67,8 +68,10 @@ const CartPage = () => {
       });
     } catch (error) {
       if (error.response.status == 401) {
-        alert("You are not login Please login");
-        window.location.href = "/Login";
+        toast.info("Please log in to continue")
+        setTimeout(() => {
+            window.location.href = '/Login'
+        }, 1200);
       }
     } finally {
       setIsLoadingQuantityDecBtn(null)
@@ -112,7 +115,7 @@ const CartPage = () => {
         image: "public\Images\trendzWear1.png",
         order_id: order.id,
         handler: async function (res) {
-          alert("Transaction Successful");
+          toast.success("Transaction Successful");
         },
         prefill: {
           name: "TrendzWear",
@@ -126,13 +129,15 @@ const CartPage = () => {
       const rzp1 = new Razorpay(option);
 
       rzp1.on("payment.failed", function (res) {
-        (alert(res.error.code),
-          alert(res.error.description),
-          alert(res.error.source),
-          alert(res.error.stop),
-          alert(res.error.reason),
-          alert(res.error.metadata.order_id),
-          alert(res.error.metadata.payment_id));
+       toast.error(res.error.description || "Payment failed. Please try again.") 
+        
+        // (alert(res.error.code),
+        //   alert(res.error.description),
+        //   alert(res.error.source),
+        //   alert(res.error.stop),
+        //   alert(res.error.reason),
+        //   alert(res.error.metadata.order_id),
+        //   alert(res.error.metadata.payment_id));
       });
 
       rzp1.open();
@@ -188,8 +193,10 @@ const CartPage = () => {
       } catch (error) {
         console.log(error.response);
         if (error.response.status == 401) {
-          alert("You are not login Please login");
-          window.location.href = "/Login";
+            toast.info("Please log in to continue")
+            setTimeout(() => {
+              window.location.href = '/Login'
+            }, 1200);
         }
       } finally {
         setIsLoadingCartProduct(false);
@@ -214,6 +221,14 @@ const CartPage = () => {
             ? Array.from({ length: 3 }).map((_, i) => (
                 <CartItemSkeleton key={i} />
               ))
+            : cart.length === 0 ? (
+      <div className="bg-white rounded-xl p-10 m-4 text-center">
+        <h2 className="text-xl font-bold mb-2">Your cart is empty</h2>
+        <p className="mb-4 text-gray-600">Looks like you haven't added anything yet.</p>
+        <Link to="/" className="bg-green-800 text-green-50 font-bold rounded-md px-4 py-2">
+          Continue shopping
+        </Link>
+      </div> )
             : cart.map((item, index) => {
                 return (
                   <div

@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import '../Styles/Navbar.css'
 import { Link, useNavigate } from 'react-router-dom';
+import { Badge } from 'antd';
+import { CartContext } from './CartContext';
 
 const Navbar = () => {
 
     // const[filterEnable, setFilterEnable] = useState(false);
     const navigate = useNavigate() 
+    const { cart } = useContext(CartContext)
 
 //     const changeCapture = () => {
 //     setFilterEnable(true);
@@ -57,8 +60,10 @@ return(
 
             {/* <button className='nav-cart-btn' onClick={()=>navigate('/Cart')}>Cart</button> */}
             <div className='flex flex-col items-center relative group hover:cursor-pointer'>
-                <span  onClick={()=>navigate('/Cart')} className="material-symbols-outlined hover:text-yellow-300">shopping_cart</span>
-                <p className='text-xs'>Cart</p>
+                <Badge count={cart.length} size="small" color="#eab308" offset={[-2, 2]}>
+    <span onClick={()=>navigate('/Cart')} className="material-symbols-outlined text-white hover:text-yellow-300">shopping_cart</span>
+</Badge>
+                    <p className='text-xs'>Cart</p>
                  <span className='absolute left-0 bottom-2 w-0 h-0.5 bg-yellow-500 group-hover:w-full transition-all duration-300' ></span>
             </div>
 

@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../Styles/AllCategoriesProducts.css";
 import { CartContext } from "../Components/CartContext";
+import { toast } from "react-toastify";
 
 const AllCategoriesProducts = () => {
   const { category } = useParams();
@@ -66,8 +67,8 @@ const AllCategoriesProducts = () => {
         })
         .catch((error) => {
           if (error.response.status == 401) {
-            alert("You are not login Please login");
-            window.location.href = "/Login";
+            toast.info("Please login to continue")
+            setTimeout(() =>{window.location.href = '/Login'}, 1200)
           }
           console.log("Error fetching main product", err);
         })

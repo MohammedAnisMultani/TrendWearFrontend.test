@@ -4,6 +4,7 @@ import '../Styles/FilterAllProducts.css'
 import axios from "axios"
 import Navbar from "./Navbar";
 import About from "./About";
+import { toast } from "react-toastify";
 
 const FilterAllProducts = () => {
     const[allProductData, setAllProductData] = useState([]);
@@ -37,8 +38,10 @@ const pageHandler = (value) => {
            setAllProductData(res.data)
            } catch (error) {
              if(error.response.status==401){
-        alert('You are not login Please login')
-        window.location.href = '/Login'
+                toast.info("Please log in to continue")
+                setTimeout(() => {
+                    window.location.href='/Login'
+                }, 1200);
     
     }
 

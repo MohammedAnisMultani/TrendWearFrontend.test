@@ -7,6 +7,13 @@ export const CartContext = createContext()
 export const CartProvider = ({children}) => {
     const[cart, setCart] = useState([]);
 
+//for Badge icon:
+    useEffect(() => {
+  axios.get('https://trend-wear-test-z9so.vercel.app/Cart', { withCredentials: true })
+    .then(res => setCart(Array.isArray(res.data) ? res.data : []))
+    .catch(() => {}); // not logged in: ignore
+}, []);
+
     const AddToCart = async(product) => {
       
     
@@ -18,8 +25,8 @@ export const CartProvider = ({children}) => {
         console.log(data.data)
     } catch (error) {
          if(error.response.status==401){
-        alert('You are not login Please login')
-        window.location.href = '/Login'
+        toast.info("Please log in to continue")
+        setTimeout(()=> {window.location.href = '/Login'}, 1200);
     
     }
         console.log(error, 'Not found')

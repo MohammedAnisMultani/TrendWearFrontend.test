@@ -26,7 +26,26 @@ const Register = () => {
   };
 
   const handleRegister = async (e) => {
-    e.preventDefault();
+      e.preventDefault();
+
+    //trimming the name:
+    const cleanedData = {
+      ...formData,
+      name : formData.name.trim(),
+      username : formData.username.trim(),
+      email : formData.email.trim()
+    }
+
+    //Handling Error:
+    if(cleanedData.password != cleanedData.cpassword){
+      toast.error("Passwords do not match")
+      return 
+    }
+    if(!cleanedData.email.includes("@")){
+      toast.error("Invalid Email")
+      return;
+    }
+  
     setIsLoadingRegisterBtn(true);
     try {
       let res = await axios.post(
@@ -58,6 +77,7 @@ const Register = () => {
               alt=""
             />
           </div>
+          
           <form
             onSubmit={handleRegister}
             className="shadow-2xl !border-none !bg-yellow-50 text-green-800 register-form"
